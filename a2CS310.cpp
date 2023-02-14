@@ -63,8 +63,9 @@ void placeTriomino(unsigned int x1, unsigned int x2, unsigned int x3, unsigned i
 int fillBoard(int arrSize, int missx, int missy)
 {
     int row, column;
-    for (int i = 0; i < missx + arrSize; i++) {
-        for (int j = 0; j < missx + arrSize; j++) {
+    //FIND MISSING SQUARE. LOOK FOR -1 ON BOARD.
+    for (int i = 0; i < startX + arrSize; i++) {
+        for (int j = 0; j < startX + arrSize; j++) {
             if (board[i][j] != 0) {
                 row = i; column = j;
             }
